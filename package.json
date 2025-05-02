@@ -1,0 +1,38 @@
+{
+  "name": "smart-error-aggregator",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js && tsc --emitDeclarationOnly",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "error",
+    "aggregator",
+    "debugging",
+    "logging",
+    "javascript",
+    "typescript"
+  ],
+  "author": "Rohit Mishra <iamrht21@gmail.com>",
+  "license": "MIT",
+  "description": "A lightweight package to aggregate and analyze JavaScript errors with actionable suggestions.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rht-21/smart-error-aggregator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rht-21/smart-error-aggregator/issues"
+  },
+  "homepage": "https://github.com/rht-21/smart-error-aggregator#readme",
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "esbuild": "^0.25.3",
+    "typescript": "^5.8.3"
+  }
+}
